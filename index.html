@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Penjualan Makanan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Kuliner Nesaci</h1>
+        </div>
+        <nav>
+            <ul>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu">
+        <h2>Menu Makanan</h2>
+        <div class="menu-item">
+            <img src="bakso2.jpg" alt="">
+            <h3>Bakso</h3>
+            <p>Harga: Rp 20,000</p>
+            <button class="order-btn" onclick="orderFood('Bakso')">Order Now</button>
+        </div>
+        <div class="menu-item">
+            <img src="mie_ayam.jpg" alt="Burger">
+            <h3>Mie Ayam</h3>
+            <p>Harga: Rp 10,000</p>
+            <button class="order-btn" onclick="orderFood('Mie Ayam')">Order Now</button>
+        </div>
+        <!-- Tambah menu lainnya sesuai kebutuhan -->
+    </section>
+
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <p>Hubungi kami melalui WhatsApp untuk melakukan pemesanan.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Foodie Store. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function orderFood(item) {
+            const phoneNumber = '6287816548103'; // Ganti dengan nomor WhatsApp Anda
+            const message = `Halo, saya ingin memesan ${item}.`;
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
